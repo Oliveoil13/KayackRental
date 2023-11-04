@@ -1,3 +1,4 @@
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -68,18 +69,6 @@ select{
   color: #000;
   cursor: pointer;
 }
-dropdown{
-  position: relative;
-  min-width: 350px;
-  
-  
+.dropdown{
+  color: #804e8c;
 }
-.dropdown::before,
-.dropdown::after {
-  --size: 0.3rem;
-  position: absolute;
-  content: "";
-  right: 1rem;
-  pointer-events: none;
-}
-

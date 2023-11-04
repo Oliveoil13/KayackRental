@@ -1,5 +1,6 @@
 
-Rollerskates = [
+
+const Rollerskates = [
     ['Moxie',
     ['Beach Bunnies',
     ['Size 4',30],
@@ -28,7 +29,7 @@ Rollerskates = [
     ],
     ]
 
-GrindBlocks = [
+const GrindBlocks = [
     ['CIB',
     ['Small', 40],
     ['Medium',50],
@@ -44,10 +45,11 @@ GrindBlocks = [
 
 
 
-#for x in Rollerskates:
-    #print(x)
-#print(Rollerskates[0][1:])
+/*for x in Rollerskates:
+    print(x)
+print(Rollerskates[0][1:])
 
 for brand in Rollerskates:
     print(brand[0])
 
+*/
