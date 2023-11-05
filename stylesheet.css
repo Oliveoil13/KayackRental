@@ -54,12 +54,16 @@ p {
   font-family: Calibri ,Arial, Helvetica, sans-serif;
 }
 
-select{
 
+.dropdown {
+  min-width: 350px;
+}
+
+select {
   appearance: none;
-
+  /* safari */
   -webkit-appearance: none;
-  
+  /* other styles for aesthetics */
   width: 100%;
   font-size: 1.15rem;
   padding: 0.675em 6em 0.675em 1em;
@@ -68,7 +72,4 @@ select{
   border-radius: 0.25rem;
   color: #000;
   cursor: pointer;
-}
-.dropdown{
-  color: #804e8c;
 }
