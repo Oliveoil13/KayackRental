@@ -48,7 +48,7 @@ const GrindBlocks = [
 // first function, it needs to make a dynamic dropdown takes the first items in the idex to make the items in the dropdown
 //and then sets a varible to the idex of the one selected
 
-let firstDropdown = "<option >Open this select menu</option>";
+let firstDropdown = "<option>Open this select menu</option>";
 for (let i = 0; i < Rollerskates[0].length; i++) {
     firstDropdown += "<option value=\"" + "\">" + Rollerskates[i][0] + "</option>";
 }
