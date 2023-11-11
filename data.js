@@ -54,8 +54,6 @@ for (let i = 0; i < Rollerskates[0].length; i++) {
 }
 document.getElementById("populateFirstDropdown").innerHTML = firstDropdown;
 
-
-
 //second one displays the next set of items within the one that was choosen and does the same thing to the next item
 
 //third one displays teh size options depending on the previous one and then save that value instead of the idex
