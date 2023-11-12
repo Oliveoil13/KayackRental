@@ -48,13 +48,33 @@ const GrindBlocks = [
 // first function, it needs to make a dynamic dropdown takes the first items in the idex to make the items in the dropdown
 //and then sets a varible to the idex of the one selected
 
-let firstDropdown = "<option>Open this select menu</option>";
+let firstDropdown = "<option disabled hidden selected>Select Brand of Skate</option>";
 for (let i = 0; i < Rollerskates[0].length; i++) {
-    firstDropdown += "<option value=\"" + "\">" + Rollerskates[i][0] + "</option>";
-}
+    let indexValue1 = i;
+    firstDropdown += "<option value=\"" + indexValue1 + "\">" + Rollerskates[i][0] + "</option>";
+} 
 document.getElementById("populateFirstDropdown").innerHTML = firstDropdown;
 
+
 //second one displays the next set of items within the one that was choosen and does the same thing to the next item
+
+//gets the value from the drop down from the first select, you update the inner html within so that it doesn't just do it once
+//now it needs to populate the second drow down menu using the value we just got
+let selectedBrand = document.querySelector("#populateFirstDropdown");
+let firstIndex = 0;
+let secondDropdown = "<option disabled hidden selected>Type of Skate</options>";
+selectedBrand.addEventListener("change", () =>{
+    firstIndex = selectedBrand.options[selectedBrand.selectedIndex].value;
+    for (let i = 0; i < Rollerskates[firstIndex][0].length;i++){
+        let indexValue2 = i;
+        secondDropdown += "<option value=\"" + indexValue2 + "\">" + Rollerskates[firstIndex][i] + "</option>";
+    }
+    document.getElementById("populateSecondDropdown").innerHTML = secondDropdown;
+   
+});
+
+
+
 
 //third one displays teh size options depending on the previous one and then save that value instead of the idex
 
