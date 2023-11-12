@@ -1,9 +1,16 @@
 
 
 const Rollerskates = [
-    ['Moxie', ['Beach Bunnies',['Size 4',30],['Size 5', 32],['Size 6', 35],],['Lollys',['Size 4',30],['Size 5', 32],['Size 6', 35],],],
-    ['Impalas',['Standard',['Size 4',30],['Size 5', 32],['Size 6', 35],]],
-    ['Moonlight',['Standard',['Size 4',30],['Size 5', 32],['Size 6', 35],]],
+    ['Moxie', 
+        ['Beach Bunnies',['Size 4',30],['Size 5', 32],['Size 6', 35],],
+        ['Lollys',['Size 4',30],['Size 5', 32],['Size 6', 35],],
+    ],
+    ['Impalas',
+        ['Standard',['Size 4',30],['Size 5', 32],['Size 6', 35],]
+    ],
+    ['Moonlight',
+        ['Standard',['Size 4',30],['Size 5', 32],['Size 6', 35],]
+    ],
     ]
 
 const GrindBlocks = [
@@ -12,37 +19,37 @@ const GrindBlocks = [
 ]
 
 //I need to make four functions here
-
+ 
 // first function, it needs to make a dynamic dropdown takes the first items in the idex to make the items in the dropdown
 //and then sets a varible to the idex of the one selected
 
 let firstDropdown = "<option disabled hidden selected>Select Brand of Skate</option>";
-for (let i = 0; i < Rollerskates[0].length; i++) {
+for (let i = 0; i < Rollerskates.length; i++) {
     let indexValue1 = i;
     firstDropdown += "<option value=\"" + indexValue1 + "\">" + Rollerskates[i][0] + "</option>";
 } 
-//document.getElementById("populateFirstDropdown").innerHTML = firstDropdown;
+document.getElementById("populateFirstDropdown").innerHTML = firstDropdown;
 
 
 //second one displays the next set of items within the one that was choosen and does the same thing to the next item
 
 //gets the value from the drop down from the first select, you update the inner html within so that it doesn't just do it once
 //now it needs to populate the second drow down menu using the value we just got
-let firstIndex = 1;
-/*let selectedBrand = document.querySelector("#populateFirstDropdown");
+let firstIndex = 0;
+let selectedBrand = document.querySelector("#populateFirstDropdown");
 
-let secondDropdown = "<option disabled hidden selected>Type of Skate</options>";
+
 selectedBrand.addEventListener("change", () =>{
     firstIndex = selectedBrand.options[selectedBrand.selectedIndex].value;
-    for (let i = 0; i < Rollerskates[firstIndex][0].length;i++){
+    let secondDropdown = "<option disabled hidden selected>Type of Skate</options>";
+    for (let i = 1; i < Rollerskates[firstIndex].length;i++){ //i is set to 1 so that it skips the first iteam in the list
         let indexValue2 = i;
-        secondDropdown += "<option value=\"" + indexValue2 + "\">" + Rollerskates[firstIndex][i] + "</option>";
+        secondDropdown += "<option value=\"" + indexValue2 + "\">" + Rollerskates[firstIndex][i][0] + "</option>";
     }
     document.getElementById("populateSecondDropdown").innerHTML = secondDropdown;
    
 });
-*/
-console.log(Rollerskates[firstIndex][0][0]);
+
 
 
 
