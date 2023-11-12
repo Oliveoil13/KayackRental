@@ -1,46 +1,14 @@
 
 
 const Rollerskates = [
-    ['Moxie',
-    ['Beach Bunnies',
-    ['Size 4',30],
-    ['Size 5', 32],
-    ['Size 6', 35],
-    ],
-    ['Lollys',
-    ['Size 4',30],
-    ['Size 5', 32],
-    ['Size 6', 35],
-    ],
-    ],
-    ['Impalas',
-    ['Standard',
-    ['Size 4',30],
-    ['Size 5', 32],
-    ['Size 6', 35],
-    ]
-    ],
-    ['Moonlight',
-    ['Standard',
-    ['Size 4',30],
-    ['Size 5', 32],
-    ['Size 6', 35],
-    ]
-    ],
+    ['Moxie', ['Beach Bunnies',['Size 4',30],['Size 5', 32],['Size 6', 35],],['Lollys',['Size 4',30],['Size 5', 32],['Size 6', 35],],],
+    ['Impalas',['Standard',['Size 4',30],['Size 5', 32],['Size 6', 35],]],
+    ['Moonlight',['Standard',['Size 4',30],['Size 5', 32],['Size 6', 35],]],
     ]
 
 const GrindBlocks = [
-    ['CIB',
-    ['Small', 40],
-    ['Medium',50],
-    ['Large',60],
-    ],
-    ['Wild Bone',
-    ['Small', 40],
-    ['Medium',50],
-    ['Large',60],
-    ],
-
+    ['CIB',['Small', 40],['Medium',50],['Large',60],],
+    ['Wild Bone',['Small', 40],['Medium',50],['Large',60],],
 ]
 
 //I need to make four functions here
@@ -53,15 +21,16 @@ for (let i = 0; i < Rollerskates[0].length; i++) {
     let indexValue1 = i;
     firstDropdown += "<option value=\"" + indexValue1 + "\">" + Rollerskates[i][0] + "</option>";
 } 
-document.getElementById("populateFirstDropdown").innerHTML = firstDropdown;
+//document.getElementById("populateFirstDropdown").innerHTML = firstDropdown;
 
 
 //second one displays the next set of items within the one that was choosen and does the same thing to the next item
 
 //gets the value from the drop down from the first select, you update the inner html within so that it doesn't just do it once
 //now it needs to populate the second drow down menu using the value we just got
-let selectedBrand = document.querySelector("#populateFirstDropdown");
-let firstIndex = 0;
+let firstIndex = 1;
+/*let selectedBrand = document.querySelector("#populateFirstDropdown");
+
 let secondDropdown = "<option disabled hidden selected>Type of Skate</options>";
 selectedBrand.addEventListener("change", () =>{
     firstIndex = selectedBrand.options[selectedBrand.selectedIndex].value;
@@ -72,7 +41,8 @@ selectedBrand.addEventListener("change", () =>{
     document.getElementById("populateSecondDropdown").innerHTML = secondDropdown;
    
 });
-
+*/
+console.log(Rollerskates[firstIndex][0][0]);
 
 
 
