@@ -32,7 +32,7 @@ const SlideBlocks = [
 // first function, it needs to make a dynamic dropdown takes the first items in the idex to make the items in the dropdown
 //and then sets a varible to the idex of the one selected
 
-let firstDropdown = "<option disabled hidden selected>Select Brand of Skate</option>";
+let firstDropdown = "<option disabled hidden selected>Brand of Skate</option>";
 for (let i = 0; i < Rollerskates.length; i++) {
     let indexValue1 = i;
     firstDropdown += "<option value=\"" + indexValue1 + "\">" + Rollerskates[i][0] + "</option>";
@@ -74,7 +74,7 @@ selectedSize.addEventListener("change",()=>{
 });
     
 //4th one is a drop down where you choose which grind block you want
-let slideBlockDropdown = "<option disabled hidden selected>Slideblock type</option>";
+let slideBlockDropdown = "<option disabled hidden selected>Slideblock Type</option>";
 for(i = 0; i < SlideBlocks.length;i++){
     let indexValue4 = i;
     slideBlockDropdown += "<option value = \"" + indexValue4 + "\">" + SlideBlocks[i][0] + "</option>"
@@ -85,4 +85,19 @@ document.getElementById("slideBlocksDropdown").innerHTML = slideBlockDropdown;
 //5th function when a button is clicked if not everything is selected correctly then it tells then to select those, then takes
 //vaule from the size that they chose and compares it to each of the sizes of the grindblock and determines which one fits the best 
 // and saves the name o that size as a variable and displays that at the end
+let selectedSkateSize = document.querySelector("#populateThirdDropdown");
+let thirdIndex;
+selectedSkateSize.addEventListener("change", ()=>{
+    thirdIndex = selectedSkateSize.options[selectedSize.selectedIndex].value;
+});
+
+function findSize(){
+    
+    let blockSize = "";
+    blockSize += "Size of skate is " + thirdIndex + " Sizes of block are" ;
+
+    document.getElementById("sizeOfBlock").innerHTML = blockSize;
+}
+
+
 
