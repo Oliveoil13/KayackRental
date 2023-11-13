@@ -87,17 +87,25 @@ document.getElementById("slideBlocksDropdown").innerHTML = slideBlockDropdown;
 // and saves the name o that size as a variable and displays that at the end
 let selectedSkateSize = document.querySelector("#populateThirdDropdown");
 let thirdIndex;
-selectedSkateSize.addEventListener("change", ()=>{
-    thirdIndex = selectedSkateSize.options[selectedSize.selectedIndex].value;
+selectedSkateSize.addEventListener("change",()=>{
+    thirdIndex = selectedSkateSize.options[selectedSkateSize.selectedIndex].value; 
+});
+
+let selectedBlockType = document.querySelector("#slideBlocksDropdown");
+let blockType;
+selectedBlockType.addEventListener("change",()=>{
+    blockType = selectedBlockType.options[selectedBlockType.selectedIndex].value; 
 });
 
 function findSize(){
     
     let blockSize = "";
-    blockSize += "Size of skate is " + thirdIndex + " Sizes of block are" ;
+    blockSize += "Size of skate is " + thirdIndex +  " Index of choosen block type is " +blockType ;
 
     document.getElementById("sizeOfBlock").innerHTML = blockSize;
 }
+
+
 
 
 
