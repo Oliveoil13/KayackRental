@@ -11,50 +11,62 @@ const Rollerskates = [
     ['Moonlight',
         ['Standard',['Size 1',40],['Size 2', 64],['Size 3', 80],]
     ],
-    ]
+];
 
 
 const SlideBlocks = [
     ['CIB',
-        ['Small', 60],
-        ['Medium',75],
-        ['Large',90],
-        ['X-Large',110],
+        [
+            ['X-Large', 110],
+            ['Medium', 75],
+            ['Large', 90],
+            ['Small', 60],
+        ]
     ],
-    ['Wildbone Slider',//this is the hanger size only they will need to determine the bone slider size themselves dependnig on the wheel base
-        ['2',54],
-        ['3',66.68],
-        ['4',79.36],
-        ['5',92.08],
-        ['6',111.126],
-        ['7',117.48],
+    ['Wildbone Slider',
+        [
+            ['7',117.48],
+            ['6',111.126],
+            ['5',92.08],
+            ['4',79.36],
+            ['3',66.68],
+            ['2',54],
+        ]
     ],
     ['Bone Plate',
-        ['Small',79.375],
-        ['Medium',98.425],
-        ['Large',111,125],
+        [
+            ['Large', 111, 125],
+            ['Medium', 98.425],
+            ['Small', 79.375],
+        ]
     ],
     ['Disco Blox',
-        ['0',55],
-        ['1',65],
-        ['2',75],
-        ['3',85],
-        ['4',95],
-        ['5',105],
-        ['6',115],
-        ['7',125],
+        [
+            ['7', 125],
+            ['6', 115],
+            ['5', 105],
+            ['4', 95],
+            ['3', 85],
+            ['2', 75],
+            ['1', 65],
+            ['0', 55],
+        ]
     ],
     ['Roller Wave Block',
-        ['Small',60],
-        ['Medium',73],
+        [
+            ['Medium', 73],
+            ['Small', 60],
+        ]
     ],
     ['Brunny Block',
-        ['Small',60],
-        ['Medium',80],
-        ['Large',95],
-        ['x-Large',110],
+        [
+            ['X-Large', 110],
+            ['Large', 95],
+            ['Medium', 80],
+            ['Small', 60],
+        ]
     ],
-]
+];
  
 //I need to make four functions here
  
@@ -125,18 +137,33 @@ let blockType;
 selectedBlockType.addEventListener("change",()=>{
     blockType = selectedBlockType.options[selectedBlockType.selectedIndex].value; 
 });
-
+let blockSize;
 function findSize(){
-    let rightFit;
-    //I need it to take the third index and compare it with all the sizes inside the block type, starting from the top down,
-    //i'll compare the top one and determine if it's small than the size, if yes, it will move on to the next one
-    //if it's smaller than the smallest one i need it to say that all the blocks are too big for your skate, try a different block
-    //i also want it to give a disclamer if it selects the one that is the hanger size only
-    let blockSize = "";
-    //blockSize += "Size of skate is " + thirdIndex +  " Index of choosen block type is " +blockType ;
-    blockSize += "The size of " + SlideBlocks[blockType][0]; + "that fits your skate is " + rightFit;
+    if(blockType && thirdIndex != null){
+        let bool = false;
+        for (const item of SlideBlocks[blockType][1]) {
+            const size = item[0];
+            const val = item[1];
+            bool = parseInt(thirdIndex) >= val;
 
-    document.getElementById("sizeOfBlock").innerHTML = blockSize;
+            if (bool) {
+                blockSize = size + " is the right size";
+                document.getElementById("sizeOfBlock").innerHTML = blockSize;
+                
+                return;
+            }
+        }
+        if(!bool){
+            blockSize = "Your skate is too small for this block type";
+            document.getElementById("sizeOfBlock").innerHTML = blockSize;
+        }
+        
+
+    }else{
+        blockSize = "please select required dropdowns ";
+        document.getElementById("sizeOfBlock").innerText = blockSize;
+
+    }
 }
 
 
