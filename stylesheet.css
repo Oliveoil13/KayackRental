@@ -1,20 +1,25 @@
 
+body.index-background {
+ 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  }
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    
     overflow: hidden;
     font-family: Calibri ,Arial, Helvetica, sans-serif;
   }
-  
 
 
  
   li a {
       float: left;  
       display: block;
-      color: black;
+      color: rgb(0, 0, 0);
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
@@ -67,10 +72,10 @@ select {
   width: 100%;
   font-size: 1.15rem;
   padding: 0.675em 6em 0.675em 1em;
-  background-color: #fff;
+  background-color: #ffffffc3;
   border: 1px solid #caced1;
   border-radius: 0.25rem;
-  color: #000;
+  color: #c95999;
   cursor: pointer;
 }
 
@@ -78,7 +83,7 @@ select {
 .button-89 {
   --b: 3px;   /* border thickness */
   --s: .45em; /* size of the corner */
-  --color: #373B44;
+  --color: #c95999;
   
   padding: calc(.5em + var(--s)) calc(.9em + var(--s));
   color: var(--color);
@@ -108,4 +113,49 @@ select {
 .button-89:active {
   background: var(--color);
   color: #fff;
+}
+.block-section {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.block-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.block-container img {
+  max-width: 300px;
+  height: auto;
+  margin-right: 20px; /* Adjust the margin as needed */
+}
+
+.block-container p {
+  flex: 1;
+}
+
+.block-section h2 {
+  text-align: center; /* Center the headers */
+}
+.sidebar {
+  position: fixed; /* Fix the sidebar position on the screen */
+  top: 20; /* Adjust this value as needed */
+  left: 0; /* Adjust this value as needed */
+  width: 120px; /* Set the width of the sidebar */
+  height: 100%; /* Make the sidebar full height */
+  background-color: #f2f2f200; /* Background color of the sidebar */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  padding-top: 20px; /* Adjust spacing from the top */
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333; /* Link color */
+}
+
+.sidebar a:hover {
+  background-color: #ddd; /* Background color on hover */
 }

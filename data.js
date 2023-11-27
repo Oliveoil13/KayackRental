@@ -66,6 +66,13 @@ const SlideBlocks = [
             ['Small', 60],
         ]
     ],
+    ['BackSide Block',
+        [   
+            ['Large',78],
+            ['Medium',60],
+            ['Small',50],
+        ]
+    ],
 ];
  
 //I need to make four functions here
@@ -160,7 +167,7 @@ function findSize(){
         
 
     }else{
-        blockSize = "please select required dropdowns ";
+        blockSize = "Please select required dropdowns ";
         document.getElementById("sizeOfBlock").innerText = blockSize;
 
     }
