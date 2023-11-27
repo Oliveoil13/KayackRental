@@ -140,7 +140,7 @@ select {
 }
 .sidebar {
   position: fixed; /* Fix the sidebar position on the screen */
-  top: 20; /* Adjust this value as needed */
+  top: 20; /* Adjust this value as needed, and make sure to add 'px' */
   left: 0; /* Adjust this value as needed */
   width: 120px; /* Set the width of the sidebar */
   height: 100%; /* Make the sidebar full height */
@@ -148,6 +148,7 @@ select {
   overflow-y: auto; /* Enable vertical scrolling if content overflows */
   padding-top: 20px; /* Adjust spacing from the top */
 }
+
 
 .sidebar a {
   display: block;

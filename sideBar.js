@@ -1,22 +1,21 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const sections = document.querySelectorAll('.block-section');
+document.addEventListener("DOMContentLoaded", function () {
     const sidebarLinks = document.querySelectorAll('.sidebar a');
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         let current = '';
 
-        sections.forEach(section => {
+        document.querySelectorAll('.block-section').forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
 
-            if (pageYOffset >= sectionTop - sectionHeight / 3) {
-                current = section.getAttribute('id');
+            if (window.scrollY >= sectionTop - sectionHeight / 3) {
+                current = section.id;
             }
         });
 
         sidebarLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) {
+            if (link.getAttribute('href').slice(1) === current) {
                 link.classList.add('active');
             }
         });
