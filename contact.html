@@ -17,7 +17,7 @@
         <li><a class="active" href="contact.html">Contact/Complain</a></li>
     </ul>
     <div class="container">
-        <form>
+        <form onsubmit="sendMeAnEmail(); reset(); return false;">
             <h2>Let me hear your complaints!</h2>
             <input type="text" id="name" placeholder="Your name" required>
             <input type="email" id="email" placeholder="Email" required>
@@ -28,7 +28,8 @@
 
     </div>
     
-   
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="sendEmail.js"></script>
 </body>
 
 </html>
