@@ -12,7 +12,7 @@ function updateActiveSection() {
     const sectionBottom = sectionTop + section.offsetHeight;
 
     // Adjust this value to determine when the link should be considered active
-    const activationThreshold = 0.5; // 50% of the section's height
+    const activationThreshold = 0.3; // 50% of the section's height
 
     if (
       scrollPosition + windowHeight * activationThreshold >= sectionTop &&
