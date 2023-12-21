@@ -44,12 +44,13 @@ function handleSidebarLinkClick(event) {
   // Add 'active' class to the clicked link
   clickedLink.classList.add('active');
 
-  // Scroll to the corresponding section
+  // Scroll to the corresponding section with an offset
   const targetSectionId = clickedLink.getAttribute('href').substring(1);
   const targetSection = document.getElementById(targetSectionId);
   if (targetSection) {
+    const offset = 50; // Adjust this value as needed
     window.scrollTo({
-      top: targetSection.offsetTop,
+      top: targetSection.offsetTop - offset,
       behavior: 'smooth'
     });
   }
