@@ -48,7 +48,7 @@ function handleSidebarLinkClick(event) {
   const targetSectionId = clickedLink.getAttribute('href').substring(1);
   const targetSection = document.getElementById(targetSectionId);
   if (targetSection) {
-    const offsetPercentage = 0.8; // Adjust this value as needed (percentage of viewport height)
+    const offsetPercentage = 0.6; // Adjust this value as needed (percentage of viewport height)
     const offset = window.innerHeight * offsetPercentage;
 
     window.scrollTo({
