@@ -48,7 +48,7 @@ function handleSidebarLinkClick(event) {
   const targetSectionId = clickedLink.getAttribute('href').substring(1);
   const targetSection = document.getElementById(targetSectionId);
   if (targetSection) {
-    const offset = 50; // Adjust this value as needed
+    const offset = 300; // Adjust this value as needed
     window.scrollTo({
       top: targetSection.offsetTop - offset,
       behavior: 'smooth'
