@@ -41,8 +41,7 @@ function handleSidebarLinkClick(event) {
   // Remove 'active' class from all links
   document.querySelectorAll('.sidebar a').forEach(link => link.classList.remove('active'));
 
-  // Add 'active' class to the clicked link
-  clickedLink.classList.add('active');
+
 
   // Scroll to the corresponding section with an offset
   const targetSectionId = clickedLink.getAttribute('href').substring(1);
