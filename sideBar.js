@@ -33,8 +33,35 @@ function updateActiveSection() {
   });
 }
 
+// Function to handle click on sidebar links
+function handleSidebarLinkClick(event) {
+  event.preventDefault(); // Prevent the default behavior of the link
+  const clickedLink = event.currentTarget;
+
+  // Remove 'active' class from all links
+  document.querySelectorAll('.sidebar a').forEach(link => link.classList.remove('active'));
+
+  // Add 'active' class to the clicked link
+  clickedLink.classList.add('active');
+
+  // Scroll to the corresponding section
+  const targetSectionId = clickedLink.getAttribute('href').substring(1);
+  const targetSection = document.getElementById(targetSectionId);
+  if (targetSection) {
+    window.scrollTo({
+      top: targetSection.offsetTop,
+      behavior: 'smooth'
+    });
+  }
+}
+
 // Attach the function to the scroll event
 window.addEventListener('scroll', updateActiveSection);
+
+// Attach click event listener to each sidebar link
+document.querySelectorAll('.sidebar a').forEach(link => {
+  link.addEventListener('click', handleSidebarLinkClick);
+});
 
 // Call the function on page load to set the initial active section
 window.addEventListener('load', () => {
