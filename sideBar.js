@@ -48,15 +48,16 @@ function handleSidebarLinkClick(event) {
   const targetSectionId = clickedLink.getAttribute('href').substring(1);
   const targetSection = document.getElementById(targetSectionId);
   if (targetSection) {
-    const offset = 300; // Adjust this value as needed
-    const targetOffset = targetSection.getBoundingClientRect().top + window.scrollY - offset;
+    const offsetPercentage = 0.4; // Adjust this value as needed (percentage of viewport height)
+    const offset = window.innerHeight * offsetPercentage;
 
     window.scrollTo({
-      top: targetOffset,
+      top: targetSection.offsetTop - offset,
       behavior: 'smooth'
     });
   }
 }
+
 
 
 // Attach the function to the scroll event
