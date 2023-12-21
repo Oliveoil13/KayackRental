@@ -49,12 +49,15 @@ function handleSidebarLinkClick(event) {
   const targetSection = document.getElementById(targetSectionId);
   if (targetSection) {
     const offset = 300; // Adjust this value as needed
+    const targetOffset = targetSection.getBoundingClientRect().top + window.scrollY - offset;
+
     window.scrollTo({
-      top: targetSection.offsetTop - offset,
+      top: targetOffset,
       behavior: 'smooth'
     });
   }
 }
+
 
 // Attach the function to the scroll event
 window.addEventListener('scroll', updateActiveSection);
