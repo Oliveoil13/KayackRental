@@ -1,13 +1,9 @@
 function sendMeAnEmail(){
-    Email.send({
-        Host : "smtp.gmail.com",
-        Username : "olivequinn13@gmail.com",
-        Password : "password",
-        To : 'them@website.com',
-        From : "you@isp.com",
-        Subject : "This is the subject",
-        Body : "And this is the body"
-    }).then(
-      message => alert(message)
-    );  
+  let parms = {
+    name : document.getElementById("name").value,
+    email : document.getElementById("email").value,
+    subject : document.getElementById("subject").value,
+    message : document.getElementById("message").value,
+  } 
+  emailjs.send("service_tcfwpic","template_x2arf3e",parms).then(alert("Email Sent!!"))
 }
