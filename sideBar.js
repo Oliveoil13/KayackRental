@@ -12,7 +12,7 @@ function updateActiveSection() {
     const sectionBottom = sectionTop + section.offsetHeight;
 
     // Adjust this value to determine when the link should be considered active
-    const activationThreshold = 0.5; // 50% of the section's height
+    const activationThreshold = 0.3; // 50% of the section's height
 
     if (
       scrollPosition + windowHeight * activationThreshold >= sectionTop &&
@@ -33,8 +33,39 @@ function updateActiveSection() {
   });
 }
 
+// Function to handle click on sidebar links
+function handleSidebarLinkClick(event) {
+  event.preventDefault(); // Prevent the default behavior of the link
+  const clickedLink = event.currentTarget;
+
+  // Remove 'active' class from all links
+  document.querySelectorAll('.sidebar a').forEach(link => link.classList.remove('active'));
+
+
+
+  // Scroll to the corresponding section with an offset
+  const targetSectionId = clickedLink.getAttribute('href').substring(1);
+  const targetSection = document.getElementById(targetSectionId);
+  if (targetSection) {
+    const offsetPercentage = 0.6; // Adjust this value as needed (percentage of viewport height)
+    const offset = window.innerHeight * offsetPercentage;
+
+    window.scrollTo({
+      top: targetSection.offsetTop - offset,
+      behavior: 'smooth'
+    });
+  }
+}
+
+
+
 // Attach the function to the scroll event
 window.addEventListener('scroll', updateActiveSection);
+
+// Attach click event listener to each sidebar link
+document.querySelectorAll('.sidebar a').forEach(link => {
+  link.addEventListener('click', handleSidebarLinkClick);
+});
 
 // Call the function on page load to set the initial active section
 window.addEventListener('load', () => {
