@@ -1,10 +1,15 @@
-
 body.index-background {
- 
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
   }
+.title {
+  color: #0074f8;
+  width: 30%;
+  margin: auto;
+  margin-top: 20px;
+  background-color: white;
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -17,20 +22,21 @@ ul {
 
  
   li a {
-      float: left;  
+      float: right;  
       display: block;
+      background-color: #fff;
       color: rgb(0, 0, 0);
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
   }
   li a.active {
-    background-color: #804e8c;
+    background-color: #0074f8;
     color: white;
   }
   li a:hover:not(.active){
       background-color: #111;
-      color: white;
+      color: rgb(255, 255, 255);
   }
   .centerImg {
     display: block;
