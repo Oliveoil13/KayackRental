@@ -1,8 +1,13 @@
 body.index-background {
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
+  background-attachment: scroll;
+  background-size: 100% 34%;
   }
+
+.photo{
+  padding: 8%;
+  padding-bottom: 17%;
+}
 
 .title {
   color: #0f243b;
@@ -22,14 +27,14 @@ ul {
   li a {
       float: right;  
       display: block;
-      background-color: #fff;
+      background-color: #ffffff00;
       color: rgb(0, 0, 0);
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
   }
   li a.active {
-    background-color: #0074f8;
+    background-color: #243548;
     color: white;
   }
   li a:hover:not(.active){
@@ -62,6 +67,7 @@ ul {
   grid-row: 1;
 }
 .one > img {
+  border-radius: 5%;
   max-width: 100%;
 }
 .two {
