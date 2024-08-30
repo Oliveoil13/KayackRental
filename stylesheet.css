@@ -62,8 +62,11 @@ ul {
 
   @media only screen and (max-width: 427px) {
     li a {
-        font-size: 80%;
-    }
+      font-size: 3.3vw ; 
+  }
+
+ 
+
 }
 
   li a.active {
