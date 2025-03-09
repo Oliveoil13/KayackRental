@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
 
 /*
-	Easy Haul KayakD
+	Hielo by TEMPLATED
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
@@ -1696,7 +1696,7 @@
 		}
 
 	h2 {
-		font-size: 1.50rem;
+		font-size: 1.75rem;
 	}
 
 	h3 {
@@ -4162,7 +4162,7 @@
 				}
 
 			.banner > article h2 {
-				font-size: 7rem;
+				font-size: 2rem;
 				margin-bottom: 0;
 				color: #FFF;
 				font-weight: 300;
@@ -4175,7 +4175,7 @@
 			.banner > article p {
 				color: rgba(255, 255, 255, 0.65);
 				text-transform: uppercase;
-				font-size: 1rem;
+				font-size: 2rem;
 				font-weight: 300;
 				margin: 0;
 				padding-bottom: 1.75rem;
