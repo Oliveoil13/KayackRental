@@ -1784,7 +1784,7 @@
 	}
 
 	a {
-		color: #8a4680;
+		color: #555;
 	}
 
 	strong, b {
@@ -4004,7 +4004,8 @@
 /* Banner */
 
 	.banner {
-		background-color: #8a4680;
+		background-image: url('slide01.jpg');
+		background-color: #0c3954;
 		color: #e2d1df;
 		padding: 8em 0;
 		position: relative;
