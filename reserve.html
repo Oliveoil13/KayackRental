@@ -18,16 +18,43 @@
                 <div class="align-left">
 					<div class="row 200%">
 						<div class="6u 12u$(medium)">
-							<h2>1. Call to Reserve</h2>
-							<h4>Call 385-335-7685 to find avalibility and Reserve them 	</h4>
-							<h2>2. Fill out the form</h2>
-							<h4>This will ensure the right kayaks are reserved.</h4>
-							<h2>3. Pick up your kayaks!</h2>
+							<h2>1. Schedule Pick up</h2>
+							<h4>Select an option and choose what date and time you wish to pick them up. If you want to reserve an amount that isn't show you can text us at 385-335-7685 to book instead</h4>
+							<h2>2. Schedule a drop off time</h2>
+							<h4>Select the schedule the return button and pick a date and time for the return.</h4>
+							<h2>3. Pay for your reservation.</h2>
+							<h4>You can go to the pricing page if you have questions or text us for more information.</h4>
+							<h2>3. Pick up your kayaks</h2>
 							<h4>Pick them up at 351 s 900 e provo ut</h4>
+							
+						
 						</div>
 						<div class="6u 12u$(medium)">
-							<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeM5PZrYM6GOKrDUlQDw_enmxorkRJB71VAt4m6xUWcTAokMA/viewform?embedded=true" width="340" height="2700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>						</div>
+							
+							<button class="special"
+							data-cal-link="easy-haul-kayak/trailer"
+ 							data-cal-namespace="trailer"
+ 							data-cal-config='{"layout":"month_view"}'
+							>Reserve a Trailer</button>
+							<button class="special"
+							data-cal-namespace="double"
+							data-cal-link="easy-haul-kayak/double"
+							data-cal-config='{"layout":"month_view"}'
+							>Reserve a Double</button>
+							<button class="special"
+							data-cal-link="easy-haul-kayak/single"
+							data-cal-namespace="single"
+							data-cal-config='{"layout":"month_view"}'
+	 						>Reserve a Single</button>
+							<button class="special"
+							data-cal-link="easy-haul-kayak/return-kayaks"
+							data-cal-namespace="return-kayaks"
+							data-cal-config='{"layout":"month_view"}'
+							>Schedule the return</button>
+						</div>
+							
                		</div>
+					
 				</div>
 			</div>
 
@@ -39,3 +66,17 @@
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script><script src="assets/js/jquery.scrollex.min.js"></script><script src="assets/js/skel.min.js"></script><script src="assets/js/util.js"></script><script src="assets/js/main.js"></script></body></html>
+			<!-- Cal element-click embed code begins -->
+			<script type="text/javascript">
+				(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+			Cal("init", "trailer", {origin:"https://cal.com"});
+			Cal("init", "double", {origin:"https://cal.com"});
+			Cal("init", "single", {origin:"https://cal.com"});
+			Cal("init", "return-kayaks", {origin:"https://cal.com"});
+				
+				Cal.ns["return-kayaks"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#0c3954"},"dark":{"cal-brand":"#317a8b"}},"hideEventTypeDetails":false,"layout":"month_view"});
+				Cal.ns.single("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#0c3954"},"dark":{"cal-brand":"#317a8b"}},"hideEventTypeDetails":false,"layout":"month_view"});
+				Cal.ns.double("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#0c3954"},"dark":{"cal-brand":"#317a8b"}},"hideEventTypeDetails":false,"layout":"month_view"});
+				Cal.ns.trailer("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#0c3954"},"dark":{"cal-brand":"#317a8b"}},"hideEventTypeDetails":false,"layout":"month_view"});
+			</script>
+	
