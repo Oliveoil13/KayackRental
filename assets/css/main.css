@@ -1898,11 +1898,12 @@
 		border-radius: 2px;
 		border: 0;
 		cursor: pointer;
-		display: inline-block;
+		display: block;
 		font-weight: 300;
 		height: 2.85rem;
 		line-height: 2.95rem;
 		padding: 0 1.5rem;
+		margin: 1rem;
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
