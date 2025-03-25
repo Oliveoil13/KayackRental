@@ -22,8 +22,7 @@
 							<h4>Select an option and choose what date and time you wish to pick them up. If you want to reserve an amount that isn't show you can text us at 385-220-0013 to book instead</h4>
 							<h2>2. Schedule a drop off time</h2>
 							<h4>Select the schedule the return button and pick a date and time for the return.</h4>
-							<h2>3. Pay for your reservation.</h2>
-							<h4>You can go to the pricing page if you have questions or text us for more information.</h4>
+						
 							<h2>3. Pick up your kayaks</h2>
 							<h4>Pick them up at 351 s 900 e provo ut</h4>
 							
@@ -31,25 +30,71 @@
 						</div>
 						<div class="6u 12u$(medium)">
 							
-							<button class="special"
+
+							<h3>Reserve a Trailer</h3>
+
+							<button class="reserve"
 							data-cal-link="easy-haul-kayak/trailer"
  							data-cal-namespace="trailer"
  							data-cal-config='{"layout":"month_view"}'
-							>Reserve a Trailer</button>
+							>one Day</button>
+
+							<button class="reserve"
+							data-cal-link="easy-haul-kayak/kayak-trailer-6-kayaks-2-days"
+  							data-cal-namespace="kayak-trailer-6-kayaks-2-days"
+							data-cal-config='{"layout":"month_view"}'
+							>Two Days</button>
+
+							<button class="reserve"
+							data-cal-link="easy-haul-kayak/kayak-trailer-6-kayaks-three-days"
+							data-cal-namespace="kayak-trailer-6-kayaks-three-days"
+							data-cal-config='{"layout":"month_view"}'
+							>Three Days</button>
 							
-							<button class="special"
+							
+							<h3>Reserve a Double</h3>
+
+							<button class="reserve"
 							data-cal-namespace="double"
 							data-cal-link="easy-haul-kayak/double"
 							data-cal-config='{"layout":"month_view"}'
-							>Reserve a Double</button>
+							>one Day</button>
+
+							<button class="reserve"
+							data-cal-link="easy-haul-kayak/double-kayak-two-days"
+							data-cal-namespace="double-kayak-two-days"
+							data-cal-config='{"layout":"month_view"}'
+							>Two Days</button>
+
+							<button class="reserve"
+							data-cal-link="easy-haul-kayak/double-kayak-three-days"
+ 							data-cal-namespace="double-kayak-three-days"
+							data-cal-config='{"layout":"month_view"}'
+							>Three Days</button>
 							
-							<button class="special"
+							<h3>Reserve a Single</h3>
+
+							<button class="reserve"
 							data-cal-link="easy-haul-kayak/single"
 							data-cal-namespace="single"
 							data-cal-config='{"layout":"month_view"}'
-	 						>Reserve a Single</button>
+	 						>one Day</button>
+
+							 <button class="reserve"
+							data-cal-link="easy-haul-kayak/single-kayak-two-days"
+							data-cal-namespace="single-kayak-two-days"
+							data-cal-config='{"layout":"month_view"}'
+							 >Two Days</button>
+
+							 <button class="reserve"
+							 data-cal-link="easy-haul-kayak/single-kayak-three-days"
+							 data-cal-namespace="single-kayak-three-days"
+							 data-cal-config='{"layout":"month_view"}'
+							>Three Days</button>
+
+							<h2></h2>
 							
-							<button class="special"
+							<button class="reserve"
 							data-cal-link="easy-haul-kayak/return-kayaks"
 							data-cal-namespace="return-kayaks"
 							data-cal-config='{"layout":"month_view"}'
@@ -80,11 +125,23 @@
 				(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
 			Cal("init", "trailer", {origin:"https://cal.com"});
 			Cal("init", "double", {origin:"https://cal.com"});
+			Cal("init", "double-kayak-two-days", {origin:"https://cal.com"});
+			Cal("init", "double-kayak-three-days", {origin:"https://cal.com"});
 			Cal("init", "single", {origin:"https://cal.com"});
+			Cal("init", "single-kayak-two-days", {origin:"https://cal.com"});
+			Cal("init", "single-kayak-three-days", {origin:"https://cal.com"});
 			Cal("init", "return-kayaks", {origin:"https://cal.com"});
-				
+			Cal("init", "kayak-trailer-6-kayaks-2-days", {origin:"https://cal.com"});
+			Cal("init", "kayak-trailer-6-kayaks-three-days", {origin:"https://cal.com"});
+
+  				Cal.ns["kayak-trailer-6-kayaks-three-days"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#0c3954"},"dark":{"cal-brand":"#317a8b"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  				Cal.ns["kayak-trailer-6-kayaks-2-days"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#0c3954"},"dark":{"cal-brand":"#317a8b"}},"hideEventTypeDetails":false,"layout":"month_view"});
 				Cal.ns["return-kayaks"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#0c3954"},"dark":{"cal-brand":"#317a8b"}},"hideEventTypeDetails":false,"layout":"month_view"});
+				Cal.ns["single-kayak-three-days"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#0c3954"},"dark":{"cal-brand":"#317a8b"}},"hideEventTypeDetails":false,"layout":"month_view"});
+				Cal.ns["single-kayak-two-days"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#0c3954"},"dark":{"cal-brand":"#317a8b"}},"hideEventTypeDetails":false,"layout":"month_view"});
 				Cal.ns.single("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#0c3954"},"dark":{"cal-brand":"#317a8b"}},"hideEventTypeDetails":false,"layout":"month_view"});
+				Cal.ns["double-kayak-three-days"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#0c3954"},"dark":{"cal-brand":"#317a8b"}},"hideEventTypeDetails":false,"layout":"month_view"});
+				Cal.ns["double-kayak-two-days"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#0c3954"},"dark":{"cal-brand":"#317a8b"}},"hideEventTypeDetails":false,"layout":"month_view"});
 				Cal.ns.double("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#0c3954"},"dark":{"cal-brand":"#317a8b"}},"hideEventTypeDetails":false,"layout":"month_view"});
 				Cal.ns.trailer("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#0c3954"},"dark":{"cal-brand":"#317a8b"}},"hideEventTypeDetails":false,"layout":"month_view"});
 			</script>

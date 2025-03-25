@@ -1687,7 +1687,7 @@
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
 		line-height: 1.5;
-		margin: 0 0 1rem 0;
+		margin: 0 0 0 0;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -2022,6 +2022,7 @@
 			button.alt:hover,
 			.button.alt:hover {
 				background-color: rgba(144, 144, 144, 0.075);
+				
 			}
 
 			input[type="submit"].alt:active,
@@ -2043,10 +2044,41 @@
 		input[type="submit"].special,
 		input[type="reset"].special,
 		input[type="button"].special,
+		button.reserve,
+		.button.reserve {
+			background-color: #0c3954;
+			color: #ffffff !important;
+			display: inline;
+			
+			
+		}
+
+			input[type="submit"].reserve:hover,
+			input[type="reset"].reserve:hover,
+			input[type="button"].reserve:hover,
+			button.reserve:hover,
+			.button.reserve:hover {
+				background-color: #317a8b;
+			}
+
+			input[type="submit"].reserve:active,
+			input[type="reset"].reserve:active,
+			input[type="button"].reserve:active,
+			button.reserve:active,
+			.button.reserve:active {
+				background-color: #317a8b;
+			}
+		
+		input[type="submit"].reserve,
+		input[type="reset"].reserve,
+		input[type="button"].reserve,
 		button.special,
 		.button.special {
 			background-color: #0c3954;
 			color: #ffffff !important;
+			display: inline;
+			padding: 1rem;
+			
 		}
 
 			input[type="submit"].special:hover,
